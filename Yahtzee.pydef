@@ -5,43 +5,40 @@
 from random import randint
 
 
-L = []
 
-for i in range(5):
-    L.append(randint(1,6))
-
-print(L)
     
 
-def printRoll:
+def printRoll(dice):
+    print(dice)
     cha1 = input('Change die 1?')
-        if 'yes' or 'y':
-            L.append[0]=cha1
-        else:
-            nothing???
+    if cha1 == 'yes' or cha1 == 'y':
+        L.append[0]=cha1
     cha2 = input('Change die 2?')
-        if 'yes' or 'y':
-            L.append[1]=cha2
-        else:
-            nothing???
+    if cha2 == 'yes' or cha2 == 'y':
+        L.change[1]=cha2
     cha3 = input('Change die 3?')
-        if 'yes' or 'y':
-            L.append[2]=cha
-        else:
-            nothing???
+    if cha3 == 'yes' or cha3 == 'y':
+        L.append[2]=cha
     cha4 = input('Change die 4?')
-        if 'yes' or 'y':
-            L.append[3]=cha4
-        else:
-            nothing???
+    if cha4 == 'yes' or cha4 == 'y':
+        L.append[3]=cha4
     cha5 = input('Change die 5?')
-        if 'yes' or 'y':
-            L.append[4]=cha5
-        else:
-            nothing???
+    if cha5 == 'yes' or cha5 == 'y':
+        L.append[4]=cha5
+        
     
 
 """    
 def printCard:
     
 """
+
+if __name__ == '__main__':
+
+
+    L = []
+    
+    for i in range(5):
+        L.append(randint(1,6))
+    
+    printRoll(L)
