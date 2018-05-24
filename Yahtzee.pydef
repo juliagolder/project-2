@@ -13,23 +13,28 @@ def printRoll(dice):
     ask1 = input('change die 1?')
     if ask1 == 'yes' or ask1 == 'y':
         cha1 = input('what would you like to change it to?')
-            L[0]=cha1
+        L[0]=cha1
+        print(L)
     ask2 = input('change die 2?')
     if ask2 == 'yes' or ask2 == 'y':
         cha2 = input('what would you like to change it to?')
-            L[1]=cha2
+        L[1]=cha2
+        print(L)
     ask3 = input('change die 3?')
     if ask3 == 'yes' or ask3 == 'y':
         cha3 = input('what would you like to change it to?')
-            L[2]=cha3
+        L[2]=cha3
+        print(L)
     ask4 = input('change die 4?')
     if ask4 == 'yes' or ask4 == 'y':
         cha4 = input('what would you like to change it to?')
-            L[3]=cha4
+        L[3]=cha4
+        print(L)
     ask5 = input('change die 5?')
     if ask5 == 'yes' or ask5 == 'y':
         cha5 = input('what would you like to change it to?')
-            L[4]=cha5
+        L[4]=cha5
+        print(L)
         
     
 
