@@ -3,10 +3,7 @@
 #Yahtzee.py
 
 from random import randint
-
-
-
-    
+ 
 
 def printRoll(dice):
     print(dice)
@@ -38,10 +35,19 @@ def printRoll(dice):
         
     
 
-"""    
-def printCard:
-    
-"""
+def printCard():
+    print('Aces')
+    print('Twos')
+    print('Threes')
+    print('Fours')
+    print('Fives')
+    print('Sixes')
+    print('Three of a Kind')
+    print('Four of a Kind')
+    print('Full House')
+    print('Small Straight')
+    print('Large Straight')
+    print('YAHTZEE'!)
 
 if __name__ == '__main__':
 
@@ -52,3 +58,4 @@ if __name__ == '__main__':
         L.append(randint(1,6))
     
     printRoll(L)
+    printCard()
