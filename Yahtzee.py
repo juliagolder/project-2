@@ -47,7 +47,7 @@ def printCard():
     print('Full House')
     print('Small Straight')
     print('Large Straight')
-    print('YAHTZEE'!)
+    print('YAHTZEE!')
 
 if __name__ == '__main__':
 
