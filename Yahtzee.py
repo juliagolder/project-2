@@ -49,6 +49,25 @@ def printCard():
     print('Large Straight')
     print('YAHTZEE!')
 
+def is3ofakind(L):
+    for i in range(1,7):
+        if L.count(i) >= 3:
+            return True
+    return False
+    
+def is4ofakind(L):
+    for i in range(1,7):
+        if L.count(i) >= 4:
+            return True
+    return False
+  
+
+
+
+    
+    
+    
+
 if __name__ == '__main__':
 
 
@@ -59,3 +78,4 @@ if __name__ == '__main__':
     
     printRoll(L)
     printCard()
+    is3ofakind(L)
