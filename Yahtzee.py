@@ -38,21 +38,23 @@ def printRoll(dice):
 def printCard():
     print('1: Aces')
     print('2: Twos')
-    print('Threes')
-    print('Fours')
-    print('Fives')
-    print('Sixes')
-    print('Three of a Kind')
-    print('Four of a Kind')
-    print('Full House')
-    print('Small Straight')
-    print('Large Straight')
-    print('YAHTZEE!')
+    print('3: Threes')
+    print('4: Fours')
+    print('5: Fives')
+    print('6: Sixes')
+    print('7: Three of a Kind')
+    print('8: Four of a Kind')
+    print('9: Full House')
+    print('10: Small Straight')
+    print('11: Large Straight')
+    print('12: YAHTZEE!')
 
 def enterScore(num, dice):
     if num == 1:
         L.count('1')
-        
+    if num == 2:
+        L.count('2')
+    
 
 def is3ofakind(L):
     for i in range(1,7):
