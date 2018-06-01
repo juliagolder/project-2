@@ -54,6 +54,8 @@ def enterScore(num, dice):
         L.count('1')
     if num == 2:
         L.count('2')
+    if num = 3:
+        
     
 
 def is3ofakind(L):
