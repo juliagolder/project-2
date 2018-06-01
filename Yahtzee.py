@@ -54,9 +54,26 @@ def enterScore(num, dice):
         L.count('1')
     if num == 2:
         L.count('2')
-    if num = 3:
-        
-    
+    if num == 3:
+        L.count('3')
+    if num == 4:
+        L.count('4')
+    if num == 5:
+        L.count('5')
+    if num == 6:
+        L.count('6')
+    if num == 7:
+        is3ofakind
+    if num == 8:
+        is4ofakind
+    if num == 9:
+        isfullhouse
+    if num == 10:
+        isSmallStraight
+    if num == 11:
+        isLargeStraight
+    if num == 12:
+        isYahtzee
 
 def is3ofakind(L):
     for i in range(1,7):
