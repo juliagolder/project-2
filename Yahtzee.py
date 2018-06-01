@@ -36,8 +36,8 @@ def printRoll(dice):
     
 
 def printCard():
-    print('Aces')
-    print('Twos')
+    print('1: Aces')
+    print('2: Twos')
     print('Threes')
     print('Fours')
     print('Fives')
@@ -48,6 +48,11 @@ def printCard():
     print('Small Straight')
     print('Large Straight')
     print('YAHTZEE!')
+
+def enterScore(num, dice):
+    if num == 1:
+        L.count('1')
+        
 
 def is3ofakind(L):
     for i in range(1,7):
@@ -97,11 +102,14 @@ if __name__ == '__main__':
     
     printRoll(L)
     printCard()
+    chose = int(input('What number do you want to choose?'))
     is3ofakind(L)
     is4ofakind(L)
+    enterScore(chose,L)
     """
     isfullhouse(L)
     isSmallStraight(L)
     isLargeStraight(L)
-    """
+
     isYahtzee(L)
+    """
