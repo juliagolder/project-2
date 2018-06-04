@@ -48,6 +48,7 @@ def printCard():
     print('10: Small Straight')
     print('11: Large Straight')
     print('12: YAHTZEE!')
+
 score = 0
 
 def enterScore(num, dice):
