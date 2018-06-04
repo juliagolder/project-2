@@ -48,6 +48,7 @@ def printCard():
     print('10: Small Straight')
     print('11: Large Straight')
     print('12: YAHTZEE!')
+score = 0
 
 def enterScore(num, dice):
     if num == 1:
@@ -73,22 +74,22 @@ def enterScore(num, dice):
         else:
             score = 0
     if num == 9:
-        if isfullhouse
-            score = 25
+        if isfullhouse:
+            score = sum(L)
         else:
             score = 0
     if num == 10:
-        if isSmallStraight
+        if isSmallStraight:
             score = 30
         else:
             score = 0
     if num == 11:
-        if isLargeStraight
+        if isLargeStraight:
             score = 40
         else:
             score = 0
     if num == 12:
-        if isYahtzee
+        if isYahtzee:
             score = 50
         else:
             score = 0
