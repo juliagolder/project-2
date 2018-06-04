@@ -51,29 +51,49 @@ def printCard():
 
 def enterScore(num, dice):
     if num == 1:
-        L.count('1')
+        score = L.count('1')
     if num == 2:
-        L.count('2')
+        score = L.count('2')*2
     if num == 3:
-        L.count('3')
+        score = L.count('3')*3
     if num == 4:
-        L.count('4')
+        score = L.count('4')*4
     if num == 5:
-        L.count('5')
+        score = L.count('5')*5
     if num == 6:
-        L.count('6')
+        score = L.count('6')*6
     if num == 7:
-        is3ofakind
+        if is3ofakind(L):
+            score = sum(L)
+        else:
+            score = 0
     if num == 8:
-        is4ofakind
+        if is4ofakind(L):
+            score = sum(L)
+        else:
+            score = 0
     if num == 9:
-        isfullhouse
+        if isfullhouse
+            score = 25
+        else:
+            score = 0
     if num == 10:
-        isSmallStraight
+        if isSmallStraight
+            score = 30
+        else:
+            score = 0
     if num == 11:
-        isLargeStraight
+        if isLargeStraight
+            score = 40
+        else:
+            score = 0
     if num == 12:
-        isYahtzee
+        if isYahtzee
+            score = 50
+        else:
+            score = 0
+            
+print(score)
 
 def is3ofakind(L):
     for i in range(1,7):
