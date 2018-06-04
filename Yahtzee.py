@@ -94,7 +94,6 @@ def enterScore(num, dice):
             score = 50
         else:
             score = 0
-            
 print(score)
 
 def is3ofakind(L):
