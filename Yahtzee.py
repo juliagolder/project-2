@@ -126,7 +126,7 @@ def isSmallStraight(L):
 
 def isLargeStraight(L):
     for i in L:
-        if 2 in line and 2 in line and 4  in line and 5 in line and 6 in line:
+        if 1 in line and 2 in line and 3  in line and 4 in line and 5 in line or 2 in line and 3 in line and 4  in line and 5 in line and 6 in line:
             return True
     return False
     
