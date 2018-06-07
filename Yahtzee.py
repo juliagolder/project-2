@@ -109,18 +109,21 @@ def is4ofakind(L):
             return True
     return False
 
-""" 
+
 def isfullhouse(L):
     for i in range(1,7)
         if L.count(i) == 3 and L.count(i) == 2:
             return True
     return False
-    
+
+"""    
 def isSmallStraight(L):
     for i in L:
         if 1 in line and 2 in line and 3  in line and 4 in line and 5 in line:
             return True
     return False
+"""
+
 
 def isLargeStraight(L):
     for i in L:
