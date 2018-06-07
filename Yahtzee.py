@@ -122,7 +122,6 @@ def isSmallStraight(L):
         if 1 in line and 2 in line and 3  in line and 4 in line and 5 in line:
             return True
     return False
-"""
 
 
 def isLargeStraight(L):
@@ -136,7 +135,7 @@ def isYahtzee(L):
         if L.count(i) == 6:
             return True
     return False
-"""
+
 
 if __name__ == '__main__':
 
