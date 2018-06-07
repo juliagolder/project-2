@@ -76,26 +76,26 @@ def enterScore(num, dice):
         else:
             score = 0
     if num == 9:
-        if isfullhouse:
+        if isfullhouse(L):
             score = sum(L)
         else:
             score = 0
     if num == 10:
-        if isSmallStraight:
+        if isSmallStraight(L):
             score = 30
         else:
             score = 0
     if num == 11:
-        if isLargeStraight:
+        if isLargeStraight(L):
             score = 40
         else:
             score = 0
     if num == 12:
-        if isYahtzee:
+        if isYahtzee(L):
             score = 50
         else:
             score = 0
-print(score)
+    print(score)
 
 def is3ofakind(L):
     for i in range(1,7):
@@ -111,12 +111,12 @@ def is4ofakind(L):
 
 
 def isfullhouse(L):
-    for i in range(1,7)
+    for i in range(1,7):
         if L.count(i) == 3 and L.count(i) == 2:
             return True
     return False
 
-"""    
+ 
 def isSmallStraight(L):
     for i in L:
         if 1 in line and 2 in line and 3  in line and 4 in line and 5 in line:
