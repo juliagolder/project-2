@@ -52,6 +52,7 @@ def printCard():
 
 
 def enterScore(num, dice):
+    score = 0
     if num == 1:
         score = L.count('1')
     if num == 2:
