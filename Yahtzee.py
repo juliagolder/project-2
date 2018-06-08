@@ -52,20 +52,19 @@ def printCard():
 
 
 def enterScore(num, dice):
-    L = [1,1,1,1,1,1]
     score = 0
     if num == 1:
-        score = L.count('1')
+        score = L.count(1)
     if num == 2:
-        score = L.count('2')*2
+        score = L.count(2)*2
     if num == 3:
-        score = L.count('3')*3
+        score = L.count(3)*3
     if num == 4:
-        score = L.count('4')*4
+        score = L.count(4)*4
     if num == 5:
-        score = L.count('5')*5
+        score = L.count(5)*5
     if num == 6:
-        score = L.count('6')*6
+        score = L.count(6)*6
     if num == 7:
         if is3ofakind(L):
             score = sum(L)
@@ -146,10 +145,8 @@ if __name__ == '__main__':
     for i in range(5):
         L.append(randint(1,6))
     
-    """
     printRoll(L)
     printCard()
-    """
     chose = int(input('What number do you want to choose?'))
     is3ofakind(L)
     is4ofakind(L)
