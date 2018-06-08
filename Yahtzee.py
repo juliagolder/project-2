@@ -52,6 +52,7 @@ def printCard():
 
 
 def enterScore(num, dice):
+    L = [1,1,1,1,1,1]
     score = 0
     if num == 1:
         score = L.count('1')
@@ -119,14 +120,14 @@ def isfullhouse(L):
  
 def isSmallStraight(L):
     for i in L:
-        if 1 in line and 2 in line and 3  in line and 4 in line or 2 in line and 3 in line and 4  in line and 5 in line or 3 in line and 4 in line and 5  in line and 6 in line:
+        if (1 in L and 2 in L and 3  in L and 4 in L) or (2 in L and 3 in L and 4  in L and 5 in L or 3 in L and 4 in L and 5  in L and 6 in L):
             return True
     return False
 
 
 def isLargeStraight(L):
     for i in L:
-        if 1 in line and 2 in line and 3  in line and 4 in line and 5 in line or 2 in line and 3 in line and 4  in line and 5 in line and 6 in line:
+        if (1 in L and 2 in L and 3  in L and 4 in L and 5 in L) or (2 in L and 3 in L and 4  in L and 5 in L and 6 in L):
             return True
     return False
     
@@ -145,16 +146,15 @@ if __name__ == '__main__':
     for i in range(5):
         L.append(randint(1,6))
     
+    """
     printRoll(L)
     printCard()
+    """
     chose = int(input('What number do you want to choose?'))
     is3ofakind(L)
     is4ofakind(L)
     enterScore(chose,L)
-    """
     isfullhouse(L)
     isSmallStraight(L)
     isLargeStraight(L)
-
     isYahtzee(L)
-    """
