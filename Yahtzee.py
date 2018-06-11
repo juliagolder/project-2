@@ -151,24 +151,30 @@ if __name__ == '__main__':
     
     rollDice(L,[0,1,2,3,4])
     printRoll(L)
-    which = input('Which dice do you want to roll?').split(' ')
-    toRoll = []
-    for die in which:
-        toRoll.append(int(die)-1)
-    rollDice(L,toRoll)
-    printRoll(L)
-    which = input('Which dice do you want to roll?').split(' ')
-    toRoll = []
-    for die in which:
-        toRoll.append(int(die)-1)
-    rollDice(L,toRoll)
-    printRoll(L)
-    which = input('Which dice do you want to roll?').split(' ')
-    toRoll = []
-    for die in which:
-        toRoll.append(int(die)-1)
-    rollDice(L,toRoll)
-    printRoll(L)
+    again = input('Do you want to roll again?')
+    if again == 'y' or again == 'yes':
+        which = input('Which dice do you want to roll?').split(' ')
+        toRoll = []
+        for die in which:
+            toRoll.append(int(die)-1)
+        rollDice(L,toRoll)
+        printRoll(L)
+        again = input('Do you want to roll again?')
+        if again == 'y' or again == 'yes':
+            which = input('Which dice do you want to roll?').split(' ')
+            toRoll = []
+            for die in which:
+                toRoll.append(int(die)-1)
+            rollDice(L,toRoll)
+            printRoll(L)
+            again = input('Do you want to roll again?')
+            if again == 'y' or again == 'yes':
+                which = input('Which dice do you want to roll?').split(' ')
+                toRoll = []
+                for die in which:
+                    toRoll.append(int(die)-1)
+                rollDice(L,toRoll)
+                printRoll(L)
     printCard()
     chose = int(input('What number do you want to choose?'))
     is3ofakind(L)
