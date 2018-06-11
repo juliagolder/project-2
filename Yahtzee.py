@@ -140,17 +140,23 @@ def isYahtzee(L):
 
 def rollDice(L,pick):
     for i in range(5):
-        L.append(randint(1,6))
+        if i in pick:
+            L[i] = (randint(1,6))
 
 if __name__ == '__main__':
 
 
-    L = []
+    L = [0,0,0,0,0]
     
     
     rollDice(L,[0,1,2,3,4])
     printRoll(L)
-    which = list(input('Which dice do you want to roll?'))
+    which = input('Which dice do you want to roll?').split(' ')
+    toRoll = []
+    for die in which:
+        toRoll.append(int(die)-1)
+    rollDice(L,toRoll)
+    printRoll(L)
     printCard()
     chose = int(input('What number do you want to choose?'))
     is3ofakind(L)
