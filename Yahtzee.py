@@ -7,6 +7,8 @@ from random import randint
 
 def printRoll(dice):
     print(dice)
+    
+    """
     ask1 = input('roll die 1 again?')
     if ask1 == 'yes' or ask1 == 'y':
         cha1 = randint(1,6)
@@ -32,7 +34,7 @@ def printRoll(dice):
         cha5 = randint(1,6)
         L[4]=cha5
         print(L)
-        
+    """    
     
 
 def printCard():
@@ -136,16 +138,19 @@ def isYahtzee(L):
             return True
     return False
 
+def rollDice(L,pick):
+    for i in range(5):
+        L.append(randint(1,6))
 
 if __name__ == '__main__':
 
 
     L = []
     
-    for i in range(5):
-        L.append(randint(1,6))
     
+    rollDice(L,[0,1,2,3,4])
     printRoll(L)
+    which = list(input('Which dice do you want to roll?'))
     printCard()
     chose = int(input('What number do you want to choose?'))
     is3ofakind(L)
@@ -155,3 +160,4 @@ if __name__ == '__main__':
     isSmallStraight(L)
     isLargeStraight(L)
     isYahtzee(L)
+    
