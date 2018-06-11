@@ -157,6 +157,18 @@ if __name__ == '__main__':
         toRoll.append(int(die)-1)
     rollDice(L,toRoll)
     printRoll(L)
+    which = input('Which dice do you want to roll?').split(' ')
+    toRoll = []
+    for die in which:
+        toRoll.append(int(die)-1)
+    rollDice(L,toRoll)
+    printRoll(L)
+    which = input('Which dice do you want to roll?').split(' ')
+    toRoll = []
+    for die in which:
+        toRoll.append(int(die)-1)
+    rollDice(L,toRoll)
+    printRoll(L)
     printCard()
     chose = int(input('What number do you want to choose?'))
     is3ofakind(L)
