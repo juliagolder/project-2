@@ -16,7 +16,7 @@ def printCard(scoreL): #prints out scorecard
     print('4: Fours', scoreL[3])
     print('5: Fives', scoreL[4])
     print('6: Sixes', scoreL[5])
-    print('7: Three of a Kind', scoreL[6])
+    print('7: Three of a Kind -', scoreL[6])
     print('8: Four of a Kind', scoreL[7])
     print('9: Full House', scoreL[8])
     print('10: Small Straight', scoreL[9])
