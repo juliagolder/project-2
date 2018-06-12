@@ -5,7 +5,7 @@
 from random import randint
  
 
-def printRoll(dice):
+def printRoll(dice): #
     print(dice)
     
     """
@@ -37,7 +37,7 @@ def printRoll(dice):
     """    
     
 
-def printCard():
+def printCard(): #prints out scorecard
     print('1: Aces')
     print('2: Twos')
     print('3: Threes')
@@ -53,7 +53,7 @@ def printCard():
 
 
 
-def enterScore(num, dice):
+def enterScore(num, dice): #tallies up score of the roll
     score = 0
     if num == 1:
         score = L.count(1)
@@ -99,58 +99,58 @@ def enterScore(num, dice):
             score = 0
     print(score)
 
-def is3ofakind(L):
+def is3ofakind(L): #function for determining rolls with three of a kind
     for i in range(1,7):
         if L.count(i) >= 3:
             return True
     return False
     
-def is4ofakind(L):
+def is4ofakind(L): #function for determining rolls with four of a kind
     for i in range(1,7):
         if L.count(i) >= 4:
             return True
     return False
 
 
-def isfullhouse(L):
+def isfullhouse(L): #function for determining rolls with a full house
     for i in range(1,7):
         if L.count(i) == 3 and L.count(i) == 2:
             return True
     return False
 
  
-def isSmallStraight(L):
+def isSmallStraight(L): #function for determining rolls with a small straight
     for i in L:
         if (1 in L and 2 in L and 3  in L and 4 in L) or (2 in L and 3 in L and 4  in L and 5 in L or 3 in L and 4 in L and 5  in L and 6 in L):
             return True
     return False
 
 
-def isLargeStraight(L):
+def isLargeStraight(L): #function for determining rolls with a large straight
     for i in L:
         if (1 in L and 2 in L and 3  in L and 4 in L and 5 in L) or (2 in L and 3 in L and 4  in L and 5 in L and 6 in L):
             return True
     return False
     
-def isYahtzee(L):
+def isYahtzee(L): #function for determining rolls with a Yahtzee
     for i in range(1,7):
         if L.count(i) == 6:
             return True
     return False
 
-def rollDice(L,pick):
+def rollDice(L,pick): #function that allows the user to pick which die they want to reroll
     for i in range(5):
         if i in pick:
             L[i] = (randint(1,6))
 
-if __name__ == '__main__':
+if __name__ == '__main__': #sets up and runs the game
 
 
-    L = [0,0,0,0,0]
+    L = [0,0,0,0,0] # a blank list with placeholders
     
-    
-    rollDice(L,[0,1,2,3,4])
-    printRoll(L)
+    #allows the user to roll and reroll specific dice
+    rollDice(L,[0,1,2,3,4]) #gives numbers to each die
+    printRoll(L) 
     again = input('Do you want to roll again?')
     if again == 'y' or again == 'yes':
         which = input('Which dice do you want to roll?').split(' ')
@@ -175,6 +175,7 @@ if __name__ == '__main__':
                     toRoll.append(int(die)-1)
                 rollDice(L,toRoll)
                 printRoll(L)
+    #runs all the functions
     printCard()
     chose = int(input('What number do you want to choose?'))
     is3ofakind(L)
