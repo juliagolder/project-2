@@ -11,17 +11,17 @@ def printRoll(dice): #prints out list of dice
 
 def printCard(scoreL): #prints out scorecard
     print('1: Aces', scoreL[0])
-    print('2: Twos', scoreL[0])
-    print('3: Threes', scoreL[0])
-    print('4: Fours', scoreL[0])
-    print('5: Fives', scoreL[0])
-    print('6: Sixes', scoreL[0])
-    print('7: Three of a Kind', scoreL[0])
-    print('8: Four of a Kind', scoreL[0])
-    print('9: Full House', scoreL[0])
-    print('10: Small Straight', scoreL[0])
-    print('11: Large Straight', scoreL[0])
-    print('12: YAHTZEE!', scoreL[0])
+    print('2: Twos', scoreL[1])
+    print('3: Threes', scoreL[2])
+    print('4: Fours', scoreL[3])
+    print('5: Fives', scoreL[4])
+    print('6: Sixes', scoreL[5])
+    print('7: Three of a Kind', scoreL[6])
+    print('8: Four of a Kind', scoreL[7])
+    print('9: Full House', scoreL[8])
+    print('10: Small Straight', scoreL[9])
+    print('11: Large Straight', scoreL[10])
+    print('12: YAHTZEE!', scoreL[11])
 
 
 
@@ -141,14 +141,7 @@ if __name__ == '__main__': #sets up and runs the game
                 toRoll.append(int(die)-1)
             rollDice(L,toRoll)
             printRoll(L)
-            again = input('Do you want to roll again?')
-            if again == 'y' or again == 'yes':
-                which = input('Which dice do you want to roll?').split(' ')
-                toRoll = []
-                for die in which:
-                    toRoll.append(int(die)-1)
-                rollDice(L,toRoll)
-                printRoll(L)
+        
     #allows user to pick catagory and display score card
     printCard(scoreL)
     chose = int(input('What number do you want to choose?'))
