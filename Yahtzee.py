@@ -149,14 +149,9 @@ if __name__ == '__main__': #sets up and runs the game
                     toRoll.append(int(die)-1)
                 rollDice(L,toRoll)
                 printRoll(L)
-    #runs all the functions
+    #allows user to pick catagory and display score card
     printCard(scoreL)
     chose = int(input('What number do you want to choose?'))
-    is3ofakind(L)
-    is4ofakind(L)
     enterScore(chose,L,scoreL)
-    isfullhouse(L)
-    isSmallStraight(L)
-    isLargeStraight(L)
-    isYahtzee(L)
+    printCard(scoreL)
     
