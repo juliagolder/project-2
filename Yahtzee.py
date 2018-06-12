@@ -121,18 +121,10 @@ if __name__ == '__main__': #sets up and runs the game
     L = [0,0,0,0,0] # a blank list with placeholders for dice
     
     scoreL = [' ']*12 #list for score card
-    
-    #allows the user to roll and reroll specific dice
-    rollDice(L,[0,1,2,3,4]) #gives numbers to each die
-    printRoll(L) 
-    again = input('Do you want to roll again?')
-    if again == 'y' or again == 'yes':
-        which = input('Which dice do you want to roll?').split(' ')
-        toRoll = []
-        for die in which:
-            toRoll.append(int(die)-1)
-        rollDice(L,toRoll)
-        printRoll(L)
+    for i in range(12):    
+        #allows the user to roll and reroll specific dice
+        rollDice(L,[0,1,2,3,4]) #gives numbers to each die
+        printRoll(L) 
         again = input('Do you want to roll again?')
         if again == 'y' or again == 'yes':
             which = input('Which dice do you want to roll?').split(' ')
@@ -141,10 +133,18 @@ if __name__ == '__main__': #sets up and runs the game
                 toRoll.append(int(die)-1)
             rollDice(L,toRoll)
             printRoll(L)
+            again = input('Do you want to roll again?')
+            if again == 'y' or again == 'yes':
+                which = input('Which dice do you want to roll?').split(' ')
+                toRoll = []
+                for die in which:
+                    toRoll.append(int(die)-1)
+                rollDice(L,toRoll)
+                printRoll(L)
+            
+        #allows user to pick catagory and display score card
+        printCard(scoreL)
+        chose = int(input('What number do you want to choose?'))
+        enterScore(chose,L,scoreL)
+        printCard(scoreL)
         
-    #allows user to pick catagory and display score card
-    printCard(scoreL)
-    chose = int(input('What number do you want to choose?'))
-    enterScore(chose,L,scoreL)
-    printCard(scoreL)
-    
