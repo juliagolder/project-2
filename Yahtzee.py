@@ -69,7 +69,7 @@ def enterScore(num, dice, scoreL): #tallies up score of the roll
             score = 50
         else:
             score = 0
-    print(score)
+    scoreL[num]
 
 def is3ofakind(L): #function for determining rolls with three of a kind
     for i in range(1,7):
