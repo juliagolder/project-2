@@ -147,4 +147,4 @@ if __name__ == '__main__': #sets up and runs the game
         chose = int(input('What number do you want to choose?'))
         enterScore(chose,L,scoreL)
         printCard(scoreL)
-        
+    print('Your final score is', sum(scoreL), '!')
