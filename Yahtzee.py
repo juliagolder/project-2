@@ -5,55 +5,27 @@
 from random import randint
  
 
-def printRoll(dice): #
+def printRoll(dice): #prints out list of dice
     print(dice)
     
-    """
-    ask1 = input('roll die 1 again?')
-    if ask1 == 'yes' or ask1 == 'y':
-        cha1 = randint(1,6)
-        L[0]=cha1
-        print(L)
-    ask2 = input('roll die 2 again?')
-    if ask2 == 'yes' or ask2 == 'y':
-        cha2 = randint(1,6)
-        L[1]=cha2
-        print(L)
-    ask3 = input('roll die 3 again?')
-    if ask3 == 'yes' or ask3 == 'y':
-        cha3 = randint(1,6)
-        L[2]=cha3
-        print(L)
-    ask4 = input('roll die 4 again?')
-    if ask4 == 'yes' or ask4 == 'y':
-        cha4 = randint(1,6)
-        L[3]=cha4
-        print(L)
-    ask5 = input('roll die 5 again?')
-    if ask5 == 'yes' or ask5 == 'y':
-        cha5 = randint(1,6)
-        L[4]=cha5
-        print(L)
-    """    
-    
 
-def printCard(): #prints out scorecard
-    print('1: Aces')
-    print('2: Twos')
-    print('3: Threes')
-    print('4: Fours')
-    print('5: Fives')
-    print('6: Sixes')
-    print('7: Three of a Kind')
-    print('8: Four of a Kind')
-    print('9: Full House')
-    print('10: Small Straight')
-    print('11: Large Straight')
-    print('12: YAHTZEE!')
+def printCard(scoreL): #prints out scorecard
+    print('1: Aces', scoreL[0])
+    print('2: Twos', scoreL[0])
+    print('3: Threes', scoreL[0])
+    print('4: Fours', scoreL[0])
+    print('5: Fives', scoreL[0])
+    print('6: Sixes', scoreL[0])
+    print('7: Three of a Kind', scoreL[0])
+    print('8: Four of a Kind', scoreL[0])
+    print('9: Full House', scoreL[0])
+    print('10: Small Straight', scoreL[0])
+    print('11: Large Straight', scoreL[0])
+    print('12: YAHTZEE!', scoreL[0])
 
 
 
-def enterScore(num, dice): #tallies up score of the roll
+def enterScore(num, dice, scoreL): #tallies up score of the roll
     score = 0
     if num == 1:
         score = L.count(1)
@@ -146,7 +118,9 @@ def rollDice(L,pick): #function that allows the user to pick which die they want
 if __name__ == '__main__': #sets up and runs the game
 
 
-    L = [0,0,0,0,0] # a blank list with placeholders
+    L = [0,0,0,0,0] # a blank list with placeholders for dice
+    
+    scoreL = [' ']*12 #list for score card
     
     #allows the user to roll and reroll specific dice
     rollDice(L,[0,1,2,3,4]) #gives numbers to each die
@@ -176,11 +150,11 @@ if __name__ == '__main__': #sets up and runs the game
                 rollDice(L,toRoll)
                 printRoll(L)
     #runs all the functions
-    printCard()
+    printCard(scoreL)
     chose = int(input('What number do you want to choose?'))
     is3ofakind(L)
     is4ofakind(L)
-    enterScore(chose,L)
+    enterScore(chose,L,scoreL)
     isfullhouse(L)
     isSmallStraight(L)
     isLargeStraight(L)
