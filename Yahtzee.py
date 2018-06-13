@@ -21,7 +21,7 @@ def printCard(scoreL): #prints out scorecard
     print('9: Full House -', scoreL[8])
     print('10: Small Straight -', scoreL[9])
     print('11: Large Straight -', scoreL[10])
-    print('12: YAHTZEE!' -, scoreL[11])
+    print('12: YAHTZEE! -', scoreL[11])
 
 
 
