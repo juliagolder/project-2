@@ -51,7 +51,7 @@ def enterScore(num, dice, scoreL): #tallies up score of the roll
             score = 0
     if num == 9:
         if isfullhouse(L):
-            score = sum(L)
+            score = 25
         else:
             score = 0
     if num == 10:
