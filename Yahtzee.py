@@ -86,7 +86,7 @@ def is4ofakind(L): #function for determining rolls with four of a kind
 
 def isfullhouse(L): #function for determining rolls with a full house
     L.sort()
-    if L[0] == L[1] and L[0] == L[2] and L[3] == L[4]:
+    if L[0] == L[1] and L[0] == L[2] and L[3] == L[4] and (i[2] != i[3]):
         return True
     if L[0] == L[1] and L[2] == L[3] and L[2] == L[4]: 
         return True
