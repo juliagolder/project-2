@@ -3,11 +3,11 @@
 #Yahtzee.py
 
 from random import randint
- 
+
 
 def printRoll(dice): #prints out list of dice
     print(dice)
-    
+
 
 def printCard(scoreL): #prints out scorecard
     print('1: Aces -', scoreL[0])
@@ -108,7 +108,7 @@ def isLargeStraight(L): #function for determining rolls with a large straight
     
 def isYahtzee(L): #function for determining rolls with a Yahtzee
     for i in range(1,7):
-        if L.count(i) == 6:
+        if L.count(i) == 5:
             return True
     return False
 
