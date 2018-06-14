@@ -90,7 +90,8 @@ def isfullhouse(L): #function for determining rolls with a full house
         return True
     if L[0] == L[1] and L[2] == L[3] and L[2] == L[4]: 
         return True
-
+    else:
+        return False
  
 def isSmallStraight(L): #function for determining rolls with a small straight
     for i in L:
